@@ -6,24 +6,17 @@
     <title>Commands and tools</title>
 </head>
 <style>
-    
     h4, h5, section {
         margin: 0;
         padding: 0;
     }
 
-    code {
+    p, li, ol, pre {
         margin: 0;
         padding: 0;
         font-size: small;
+        font-family: 'Times New Roman';
     }
-    
-    p {
-        font-size: small;
-        margin: 0;
-        padding: 0;
-    }
-
 </style>
 <body>
     <form action="/">
@@ -33,33 +26,66 @@
     <h1><u>Commands and tools</u></h1>
         <dl>
             <section>    
-                <dt><h4>Node</h4>
-                <p>
-                    Node is an open-source JavaScript runtime environment which can exequte JavaScript code <br>
-                    outside a browser. Node.js can let JavaScript become executed in a command line before <br>
-                    the actual content is shown in a browser. Node.js is a paradigm to include JavaScript in <br>
-                    many frameworks. The js-notation in "Node.js" doesn't refer to a js-file but is just the <br>
-                    name of the service to run JavaScript.
-                </p>
-                <br>
-                <dd>
-                    <h5>How to run a javascript file with Node</h5>
+                <dt>
+                    <h4>Node</h4>
                     <p>
-                        At first the user navigates to a specific folder where the given JS-file is located.<br>
-                        That can be done by using the <code><b><u>cd</u></b></code> command and then use the tab button<br> 
-                        on the keyboard to browse into the right folder. After accessing the right source folder,<br> 
-                        the given js-program can be run with the following command:<br>
+                        <pre>
+Node is an open-source JavaScript runtime environment which can exequte JavaScript code 
+outside a browser. Node.js can let JavaScript become executed in a command line before 
+the actual content is shown in a browser. Node.js is a paradigm to include JavaScript in 
+many frameworks. The js-notation in "Node.js" doesn't refer to a js-file but is just the 
+name of the service to run JavaScript.
+                        </pre>
                     </p>
-                    <code>
-                        PS C:\Users\Jeppe N. Dyekjær\Documents\3._Datamatiker\Git_projekter_4_semester\Node_JS\Mandatory_1>
-                        <u><b>node app.js</b></u>
-                    </code>
-                </dd>
-            </dt>
+                    <dd>
+                        <h5>How to run a javascript file with Node</h5>
+                        <p>
+                            <pre>
+At first the user navigates to a specific folder where the given JS-file is located.
+That can be done by using the <code><b><u>cd</u></b></code> command and then use the tab button 
+on the keyboard to browse into the right folder. After accessing the right source folder,
+the given js-program can be run with the following command:
+                            </pre>
+                        </p>
+                        <code>
+                            PS C:\Users\Jeppe N. Dyekjær\Documents\3._Datamatiker\Git_projekter_4_semester\Node_JS\Mandatory_1>
+                            <u><b>node app.js</b></u>
+                        </code>
+                    </dd>
+                </dt>
                 <br>
-                <br>
-                <h5>Setting up the Express web framework for Node.js</h5>
-
+                <dt>
+                    <h4>Express</h4>
+                        <p> 
+                            <pre>
+Express.js is a sub framework for Node.js. It is a server framework for Node.js which works as a 
+back-end component for MEAN-stack (overall list of components written in JavaScript
+including MongoDB-database, AngularJS, Node.js, Express.js). Express helps optimizing performance
+and does also support SSL and TLS security systems.
+                            </pre>
+                        </p>
+                </dt>
+                   <dd>
+                    <h5>Setting up the Express web framework for Node.js</h5>
+                        <p>                          
+                            <ol>
+                                <li>
+                                    At first a JSON-file called <i>package.json</i> has to be created with the following dependencies
+                                    and their version numbers: <br>                   
+                                    <pre>
+                                        <code>
+                                        { 
+                                            "dependencies": { 
+                                                "express": "4.17.1", 
+                                                "request": "^2.88.2" 
+                                            } 
+                                        } 
+                                        </code>
+                                    </pre>
+                                </li>
+                            </ol>
+                        </p>
+                    </dd>
             </section>
         </dl>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
