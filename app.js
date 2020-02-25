@@ -8,8 +8,8 @@ app.get("/arraysAndLoops", (req, res) => {
     return res.sendfile(__dirname + '/resources/arraysAndLoops.html');
  });
 
-app.get("/basicsStringsObjects", (req, res) => {
-   return res.sendfile(__dirname + '/resources/basicsStringsObjects.html');
+app.get("/objectsAndStrings", (req, res) => {
+   return res.sendfile(__dirname + '/resources/objectsAndStrings.html');
 });
 
  app.get("/commandsAndTools", (req, res) => {

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects and strings</title>
+</head>
+<style>
+    h4, h5, section {
+        margin: 0;
+        padding: 0;
+    }
+
+    p, li, ol, pre {
+        margin: 0;
+        padding: 0;
+        font-size: small;
+        font-family: 'Times New Roman';
+    }
+
+    code {
+        font-size: small;
+    }
+</style>
+<body>
+    <form action="/">
+        <button id="backToMainButton" href="/">Back to main page</button>
+    </form>
+    <h1><u>Objects and strings</u></h1> <dl>
+        <section>    
+            <dt>
+                <h4>Objects</h4>
+                <p>
+                    <pre>
+Objects in JavaScript differs a bit from objects in Java. That means, that objects in JavaScript
+also can act as variables which they can't in Java. Object-variables in JavaScript can contain 
+many values. These values in an object can then be called or changed. Spaces and line breaks in 
+in declaration of an object is not important. So for greater readability you can add as many line breaks
+as wished. 
+
+A property in a js-object can be accessed in two different ways: 
+<code>objectName.propertyName</code> 
+or
+<code>objectName["propertyName"]</code>
+                    </pre>
+                </p>
+                <dd>
+                    <h5>Example on JavaScript objects</h5>
+                    <p>
+                        <pre>
+In this example it will be demonstrated how an object gets initialized and how it can be changed and overwrited 
+to contain different values of data.
+                            <code>
+var thisSong = {"description": "The best song in the world.", "artist": "Michael Jackson", "song": "Billie Jean"};
+
+//Removes the property "description" from the object
+delete thisSong.description;
+
+console.log("Only artist:", thisSong.artist);
+console.log("All information:", thisSong)
+
+//Overwriting the object with a property called "about".
+thisSong = {"about": "Michael Jackson doesn't live any longer"};
+console.log("Overwrited object:", thisSong); 
+
+//Output
+Only artist: Michael Jackson
+All information: { artist: 'Michael Jackson', song: 'Billie Jean' }
+Overwrited object { about: "Michael Jackson doesn't live any longer" }
+                            </code>
+                        </pre>
+                    </p>
+                </dd>
+            </dt>
+        <section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>
