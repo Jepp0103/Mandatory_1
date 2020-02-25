@@ -21,7 +21,6 @@
     code {
         font-size: small;
     }
-
 </style>
 <body>
     <form action="/">
@@ -119,6 +118,34 @@ const request = require("request");
                     </dd>
                     <br>
                 <dt>
+                    <h4>nodemon</h4>
+                    <p>
+                        <pre>
+nodemon is a tool that can help to develop node.js based application to restart automatically
+each time some edition to a file has been made. The tool detects a change to file frequently.
+nodemon does not require any editions to code or development. It's an extension for running 
+js-applications.
+                        </pre>
+                    </p>
+                    <dd>
+                        <h5>Setting up nodemon tool</h5>
+                        <ol>
+                            <li>
+                                <pre>
+At first install nodemon tool by using npm as a development dependency: 
+<code><b><u>npm install -g nodemon</u></b></code>
+                                </pre>      
+                            </li>
+                            <li>
+                                <pre>
+After the installment the nodemon tool can be used to run a js-program:
+<code><b><u>nodemon app.js</u></b></code>
+                                </pre>
+                            </li>
+                        </ol>
+                    </dd>
+                </dt>
+                <dt>
                     <h4>Budo</h4>
                     <p>
                         <pre>
@@ -144,7 +171,7 @@ entering the correct folder ind the terminal:
 PS C:\Users\Jeppe N. Dyekjær\Documents\3._Datamatiker\Git_projekter_4_semester\Node_JS\NODE_JS_2020\3._jQuery\1._Intro_To_jQuery> npx budo index.js --live --open
 </code>
 <p> 
-    When the command succeeds status 200 get response the file will now automatically update in the browser window after each edition to the file.
+    When the command succeeds with a status 200 get response in the terminal, the file will now automatically update in the browser window after each edition to the file.
 </p>
                                 </li>
                             </ol>

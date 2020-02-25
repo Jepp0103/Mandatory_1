@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+
+h4, h5, section {
+    margin: 0;
+    padding: 0;
+}
+
+p, li, ol, pre {
+    margin: 0;
+    padding: 0;
+    font-size: small;
+    font-family: 'Times New Roman';
+}
+
+code {
+    font-size: small;
+}

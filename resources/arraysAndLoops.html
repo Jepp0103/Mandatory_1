@@ -4,13 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays and loops</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
+<style>
+    h4, h5, section {
+        margin: 0;
+        padding: 0;
+    }
+
+    p, li, ol, pre {
+        margin: 0;
+        padding: 0;
+        font-size: small;
+        font-family: 'Times New Roman';
+    }
+
+    code {
+        font-size: small;
+    }
+</style>
 <body>
     <form action="/">
         <button id="backToMainButton" href="/">Back to main page</button>
     </form>
-    <h1>Arrays and loops</h1>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <h1><u>Arrays and loops</u></h1>
+        <dl>
+            <section>    
+                    <h4>Example with discarded numbers - array, loop and if statement</h4>
+                    <p>
+                        <pre>
+The syntax of arrays and loops in JavaScript are quite similar to Java itself. The major difference is 
+that every type in JavaScript can be initialized with <code><b>var</b></code> instead of a specific variable declaration as in 
+Java.
+
+In this example a number element will be logged in the console if the number is above 6 or below 0.
+If it isn't, the number will be pushed (added) to the array <code>discardedNumbers</code> instead:
+                            <code>
+var numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];
+var discardedNumbers = [];
+
+for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] < 0 || numbers[i] > 6) {
+        console.log(numbers[i]);
+    } else {
+        discardedNumbers.push(numbers[i]);
+    }
+}
+console.log("Discarded numbers: " + discardedNumbers);
+
+//Output: 
+7
+11
+12
+-20
+Discarded numbers: 5,3,2,0,6
+                            </code>
+                        </pre>
+                    </p>
+                    <p>
+                        <h4>Example with modulo operator logging every second char in array - array, loop and if statement</h4>
+                    <p>
+                        <pre>
+In this example an array is given where every second char starting from b will be logged. That is done by 
+iterating through the elements in the array with a for loop and then logging every second element using
+the modulo operator:
+                            <code>
+var letters = ["a","b","c", "d", "e", "f", "g", "h"];
+
+for (i = 0; i < letters.length; i++) {
+    if (i % 2 == 0)
+        console.log(letters[i + 1]);
+}
+
+//Output:
+b
+d
+f
+h
+                            </code>
+                        </pre>
+                    </p>
+            </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>
