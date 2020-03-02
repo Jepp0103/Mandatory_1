@@ -3,25 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheet.css">
     <title>Objects and strings</title>
 </head>
-<style>
-    h4, h5, section {
-        margin: 0;
-        padding: 0;
-    }
-
-    p, li, ol, pre {
-        margin: 0;
-        padding: 0;
-        font-size: small;
-        font-family: 'Times New Roman';
-    }
-
-    code {
-        font-size: small;
-    }
-</style>
 <body>
     <form action="/">
         <button id="backToMainButton" href="/">Back to main page</button>
@@ -71,6 +55,35 @@ Overwrited object { about: "Michael Jackson doesn't live any longer" }
                         </pre>
                     </p>
                 </dd>
+                <h4>Strings</h4>
+                <p>
+                    <pre>
+Strings in JavaScript get initialized with the <code><b>var</b></code> declaration 
+and can either be defined as predefined values or as input from an argument in a method.
+A string in JavaScript stores a series of characters. A string can be a text of either 
+double or single quotes.
+                    </pre>
+                </p>
+               <dd>
+                   <h5>Example - getting a character from an index in a string</h5>
+                   <p>
+                       <pre>
+A specific character in a string can be accessed with either the method charAt() or 
+by indexing into the string. Furthermore you could say that a given string is a 
+sort of an array of chars.
+                            <code>
+var letters = "abc"
+// Getting the character "c"
+console.log("Letters: " + letters.charAt(2));
+console.log("Array index: " + letters[2]);
+
+//Output
+Letters: c
+Array index: c
+                            </code>
+                       </pre>
+                   </p>
+               </dd> 
             </dt>
         <section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
