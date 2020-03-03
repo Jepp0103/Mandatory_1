@@ -9,3 +9,7 @@ p, li, ol, pre, h4, h5, section {
 code {
     font-size: large;
 }
+
+button {
+    font-weight: bold;
+}

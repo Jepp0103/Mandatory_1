@@ -20,17 +20,23 @@ app.get("/objectsAndStrings", (req, res) => {
     return res.sendfile(__dirname + '/resources/jQuery.html');
  });
 
- app.get("/jQuery.js", (req, res) => {
-   return res.sendfile(__dirname + '/jQuery.js');
+ app.get("/", (req, res) => {
+   return res.sendfile(__dirname + '/resources/main.html');
 });
 
+ //Routing css file
  app.get('/public/stylesheet.css', (req, res) => {
-    return res.sendfile(__dirname + '/public/stylesheet.css');
- });
+   return res.sendfile(__dirname + '/public/stylesheet.css');
+});
 
- app.get("/", (req, res) => {
-    return res.sendfile(__dirname + '/resources/main.html');
- });
+//Routing jQuery-files
+ app.get("/jQueries/jQueryjQuery.js", (req, res) => {
+   return res.sendfile(__dirname + '/jQueries/jQueryjQuery.js');
+});
+
+app.get("/jQueries/commandsAndToolsjQuery.js", (req, res) => {
+   return res.sendfile(__dirname + '/jQueries/commandsAndToolsjQuery.js');
+});
 
 //Listens for port number to a given server
 var port = 8080;
