@@ -38,6 +38,19 @@ app.get("/jQueries/commandsAndToolsjQuery.js", (req, res) => {
    return res.sendfile(__dirname + '/jQueries/commandsAndToolsjQuery.js');
 });
 
+app.get("/jQueries/arraysAndLoopsjQuery.js", (req, res) => {
+   return res.sendfile(__dirname + '/jQueries/arraysAndLoopsjQuery.js');
+});
+
+app.get("/jQueries/objectsAndStringsjQuery.js", (req, res) => {
+   return res.sendfile(__dirname + '/jQueries/objectsAndStringsjQuery.js');
+});
+
+app.get("/jQueries/generaljQuery.js", (req, res) => {
+   return res.sendfile(__dirname + '/jQueries/generaljQuery.js');
+});
+
+
 //Listens for port number to a given server
 var port = 8080;
 app.listen(port, error => {

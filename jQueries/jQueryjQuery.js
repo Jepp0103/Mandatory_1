@@ -1,5 +1,3 @@
-
-
 //jQuery hide and show buttons for the jQuery page
   //Intro section
   var introButton = "#introButton"
@@ -12,7 +10,7 @@
       console.log("Intro button clicked");
       console.log(clickCount);
 
-      if(clickCount % 2 == 0) {
+      if (clickCount % 2 == 0) {
         $(jQueryBasicInfo).toggle();
         $(introButton).text("Show intro");
         $(introButton).css("background-color", "Chartreuse");
@@ -26,6 +24,3 @@
       
       clickCount++;
   });
-
-
-// $(".basicButton").

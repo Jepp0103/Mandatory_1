@@ -10,12 +10,15 @@
     <form action="/">
         <button id="backToMainButton" href="/">Back to main page</button>
     </form>
+    <br>
+    <button id ="darkButton"></button>
     <h1><u>Objects and strings</u></h1> <dl>
         <section>    
             <dt>
                 <h4>Objects</h4>
+                <button id = "objectsButton"></button>
                 <p>
-                    <pre>
+                    <pre id = "objectsInfo">
 Objects in JavaScript differs a bit from objects in Java. That means, that objects in JavaScript
 also can act as variables which they can't in Java. Object-variables in JavaScript can contain 
 many values. These values in an object can then be called or changed. Spaces and line breaks in 
@@ -28,7 +31,7 @@ or
 <code>objectName["propertyName"]</code>
                     </pre>
                 </p>
-                <dd>
+                <dd id = "objectsExampleInfo">
                     <h5>Example on JavaScript objects</h5>
                     <p>
                         <pre>
@@ -56,15 +59,16 @@ Overwrited object { about: "Michael Jackson doesn't live any longer" }
                     </p>
                 </dd>
                 <h4>Strings</h4>
+                <button id = "stringsButton"></button>
                 <p>
-                    <pre>
+                    <pre id = "stringsInfo">
 Strings in JavaScript get initialized with the <code><b>var</b></code> declaration 
 and can either be defined as predefined values or as input from an argument in a method.
 A string in JavaScript stores a series of characters. A string can be a text of either 
 double or single quotes.
                     </pre>
                 </p>
-               <dd>
+               <dd id = "exampleStringsInfo">
                    <h5>Example - getting a character from an index in a string</h5>
                    <p>
                        <pre>
@@ -87,5 +91,7 @@ Array index: c
             </dt>
         <section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../jQueries/objectsAndStringsjQuery.js"></script>
+    <script src="../jQueries/generaljQuery.js"></script>
 </body>
 </html>

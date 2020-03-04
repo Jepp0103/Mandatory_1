@@ -10,7 +10,7 @@
   $(nodeButton).click(() => {
       console.log(nodeClickCount);
 
-      if(nodeClickCount % 2 == 0) {
+      if (nodeClickCount % 2 == 0) {
         $(nodeInfo).toggle();
         $(nodeButton).text("Show node paragraph");
         $(nodeButton).css("background-color", "Chartreuse");
@@ -36,7 +36,7 @@
   $(expressButton).click(() => {
       console.log(expressClickCount);
 
-      if(expressClickCount % 2 == 0) {
+      if (expressClickCount % 2 == 0) {
         $(expressInfo).toggle();
         $(expressButton).text("Show express paragraph");
         $(expressButton).css("background-color", "Chartreuse");
@@ -62,7 +62,7 @@
   $(nodemonButton).click(() => {
       console.log(nodemonClickCount);
 
-      if(nodemonClickCount % 2 == 0) {
+      if (nodemonClickCount % 2 == 0) {
         $(nodemonInfo).toggle();
         $(nodemonButton).text("Show nodemon paragraph");
         $(nodemonButton).css("background-color", "Chartreuse");
@@ -83,20 +83,20 @@
   
     $(budoButton).css("background-color", "#ff3333");
     var budoClickCount = 0;
-    $(budoButton).text("Hide nodemon paragraph");
+    $(budoButton).text("Hide budo paragraph");
   
     $(budoButton).click(() => {
         console.log(budoClickCount);
   
-        if(budoClickCount % 2 == 0) {
+        if (budoClickCount % 2 == 0) {
           $(budoInfo).toggle();
-          $(budoButton).text("Show nodemon paragraph");
+          $(budoButton).text("Show budo paragraph");
           $(budoButton).css("background-color", "Chartreuse");
         }
   
         else {
           $(budoInfo).toggle();
-          $(budoButton).text("Hide nodemon paragraph");
+          $(budoButton).text("Hide budo paragraph");
           $(budoButton).css("background-color", "#ff3333");
         }
         

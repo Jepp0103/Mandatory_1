@@ -10,13 +10,16 @@
     <form action="/">
         <button id="backToMainButton" href="/">Back to main page</button>
     </form>
+    <br>
+    <button id ="darkButton"></button>
 
     <h1><u>Arrays and loops</u></h1>
         <dl>
             <section>    
                     <h4>Example with discarded numbers - array, loop and if statement</h4>
+                    <button id = "discardedNumbersButton"></button>
                     <p>
-                        <pre>
+                        <pre id = "discardedNumbersInfo">
 The syntax of arrays and loops in JavaScript are quite similar to Java itself. The major difference is 
 that every type in JavaScript can be initialized with <code><b>var</b></code> instead of a specific variable declaration as in 
 Java.
@@ -47,8 +50,9 @@ Discarded numbers: 5,3,2,0,6
                     </p>
                     <p>
                         <h4>Example with modulo operator logging every second char in array - array, loop and if statement</h4>
+                        <button id = "moduloButton"></button>
                     <p>
-                        <pre>
+                        <pre id = "moduloInfo">
 In this example an array is given where every second char starting from b will be logged. That is done by 
 iterating through the elements in the array with a for loop and then logging every second element using
 the modulo operator:
@@ -69,5 +73,8 @@ h
                         </pre>
                     </p>
             </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../jQueries/arraysAndLoopsjQuery.js"></script>
+    <script src="../jQueries/generaljQuery.js"></script>
 </body>
 </html>
