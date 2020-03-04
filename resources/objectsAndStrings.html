@@ -17,7 +17,7 @@
             <dt>
                 <h4>Objects</h4>
                 <button id = "objectsButton"></button>
-                <p>
+                <br>
                     <pre id = "objectsInfo">
 Objects in JavaScript differs a bit from objects in Java. That means, that objects in JavaScript
 also can act as variables which they can't in Java. Object-variables in JavaScript can contain 
@@ -30,14 +30,12 @@ A property in a js-object can be accessed in two different ways:
 or
 <code>objectName["propertyName"]</code>
                     </pre>
-                </p>
-                <dd id = "objectsExampleInfo">
+                <dt id = "objectsExampleInfo">
                     <h5>Example on JavaScript objects</h5>
-                    <p>
-                        <pre>
-In this example it will be demonstrated how an object gets initialized and how it can be changed and overwrited 
-to contain different values of data.
-                            <code>
+                    <pre>
+                        In this example it will be demonstrated how an object gets initialized and how it can be changed and overwrited 
+                        to contain different values of data.
+                        <code>
 var thisSong = {"description": "The best song in the world.", "artist": "Michael Jackson", "song": "Billie Jean"};
 
 //Removes the property "description" from the object
@@ -55,9 +53,8 @@ Only artist: Michael Jackson
 All information: { artist: 'Michael Jackson', song: 'Billie Jean' }
 Overwrited object { about: "Michael Jackson doesn't live any longer" }
                             </code>
-                        </pre>
-                    </p>
-                </dd>
+                    </pre>
+                </dt>
                 <h4>Strings</h4>
                 <button id = "stringsButton"></button>
                 <p>
@@ -68,10 +65,8 @@ A string in JavaScript stores a series of characters. A string can be a text of 
 double or single quotes.
                     </pre>
                 </p>
-               <dd id = "exampleStringsInfo">
                    <h5>Example - getting a character from an index in a string</h5>
-                   <p>
-                       <pre>
+                    <pre id = "exampleStringsInfo">
 A specific character in a string can be accessed with either the method charAt() or 
 by indexing into the string. Furthermore you could say that a given string is a 
 sort of an array of chars.
@@ -85,9 +80,7 @@ console.log("Array index: " + letters[2]);
 Letters: c
 Array index: c
                             </code>
-                       </pre>
-                   </p>
-               </dd> 
+                    </pre>
             </dt>
         <section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
