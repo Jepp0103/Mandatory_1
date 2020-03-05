@@ -1,5 +1,5 @@
 
-p, li, ol, pre, h4, h5, section {
+p, li, ol, pre, h1, h4, h5, section {
     margin: 0;
     padding: 0;
     font-family: 'Calibri';
@@ -37,6 +37,8 @@ code, pre {
     text-align: left;
 }
 
+
+/* Pictures for the jQuery page */
 #selectorsPicture {
     height: 563px;
     width: 638px;
@@ -45,4 +47,9 @@ code, pre {
 #addersPicture {
     height: 82px;
     width: 545px;
+}
+
+#getSetContentsPicture {
+    height: 150px;
+    width: 650px;
 }

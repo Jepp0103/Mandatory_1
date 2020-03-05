@@ -32,9 +32,10 @@
                             <h5>How to run a JavaScript file with Node</h5>
                             <p>
                                 <pre>
-    At first the user navigates to a specific folder where the given JS-file is located. That can be done by using the <code><b><u>cd</u></b></code> 
-    command and then use the tab button on the keyboard to browse into the right folder. After accessing the right source folder,
-    the given js-program can be run with the following command:
+    At first the user navigates to a specific folder where the given JS-file is located. 
+    That can be done by using the <code><b><u>cd</u></b></code> command and then use the 
+    tab button on the keyboard to browse into the right folder. After accessing the right 
+    source folder, the given js-program can be run with the following command:
                                 </pre>
                             </p>
                             <code>
@@ -45,9 +46,28 @@
                     </dt>
                     <br>
                     <dt>
+    <h4>Routing</h4>
+    <button id = "routingButton"></button>
+    <br>
+    <pre>
+    Routing is about how endpoints of applications (URIs) respond to client requests.
+    Routing in Express is defined by using certain methods in the Express environment which
+    corresponds to HTTP-methods ex. <code><b>app.get()</b></code> to handle GET requests, 
+    <code><b>app.post()</b></code> to handle POST requests or <code><b>app.all()</b></code>
+    to handle all types of HTTP-methods at once.
+
+    All these routing methods specify a callback function (handler functions), which is 
+    called when an application receives a to a specified endpoint. We make the application
+    listen for certain routes and methods in order to detect a match.
+
+    Routing methods can have multiple callback functions as arguments
+
+    </pre>
+                    </dt>
+                    <dt>
                         <h4>Express</h4>
                             <button id = "expressButton"></button>
-                            <p> 
+                            <br>
                                 <pre id = "expressInfo">
     Express.js is a sub framework for Node.js. It is a server framework for Node.js which works as a 
     back-end component for MEAN-stack (overall list of components written in JavaScript
@@ -55,11 +75,9 @@
     and does also support SSL and TLS security systems. 
     Express provides the service to send html pages to a browser so they can get displayed.
                                 </pre>
-                            </p>
                     </dt>
                     <dt id = "setupExpressInfo">
                         <h5>Setting up the Express web framework for Node.js</h5>
-                            <p>                          
                                 <pre>
                         At first a JSON-file called <i>package.json</i> has to be created with the following dependencies
                         and their version numbers:
@@ -73,35 +91,31 @@
                         } 
                             </code>
 
-                        Afterwards you have to install all node modules which are given libraries for the node running tool.
-                        In order to install the modules, simply type <code><b><u>npm install</u></b></code> in the terminal after navigating 
-                        to the folder where the <i>package.json</i> file is located. From there the node tool will generate a package-lock.json file
-                        which includes dependencies for the node modules.
-                                                        
-                        At last you have to import the express functionality in your wished JavaScript-file in order to use 
-                        the modules that has been installed. That is done by the following code:
+                Afterwards you have to install all node modules which are given libraries for the node running tool.
+                In order to install the modules, simply type <code><b><u>npm install</u></b></code> in the terminal after navigating 
+                to the folder where the <i>package.json</i> file is located. From there the node tool will generate 
+                a package-lock.json file which includes dependencies for the node modules.
+                                                
+                At last you have to import the express functionality in your wished JavaScript-file in order to use 
+                the modules that has been installed. That is done by the following code:
                         <code>
-                        //The way to import packages from node modules 
-                        var express = require("express");
-                        var app = express();
-                        const request = require("request");
+        //The way to import packages from node modules 
+        var express = require("express");
+        var app = express();
+        const request = require("request");
                         </code>
-
-                        More on how express can be used to display HTML-pages etc. are described on the page <i>jQuery and routing</i>
-                                </pre>
+                        </pre>
                         </dt>
-                        <br>
-                    <dt>
-                        <h4>nodemon</h4>
-                        <button id = "nodemonButton"></button>
-                        <p>
-                            <pre id = "nodemonInfo">
-    nodemon is a tool that can help to develop node.js based application to restart automatically
-    each time some edition to a file has been made. The tool detects a change to file frequently.
-    nodemon does not require any editions to code or development. It's an extension for running 
-    js-applications.
-                            </pre>
-                        </p>
+                        <dt>
+                            <h4>nodemon</h4>
+                            <button id = "nodemonButton"></button>
+                            <br>
+                                <pre id = "nodemonInfo">
+        nodemon is a tool that can help to develop node.js based application to restart automatically
+        each time some edition to a file has been made. The tool detects a change to file frequently.
+        nodemon does not require any editions to code or development. It's an extension for running 
+        js-applications.
+                                </pre>
                         <dt id = "setupnodemonInfo">
                             <h5>Setting up nodemon tool</h5>
                             <ol>
@@ -123,13 +137,12 @@ After the installment the nodemon tool can be used to run a js-program:
                     <dt>
                         <h4>Budo</h4>
                         <button id = "budoButton"></button>
-                        <p>
+                        <br>
                             <pre id = "budoInfo">
 Budo is a server focused reloading integration for js-development. The tool live reloads a working page
 every time a change to the document occur. That makes it a lot easier to test visualization of a given
 HTML-page for instance.
                             </pre>
-                        </p>
                             <dt id = "setupBudoInfo">
                                 <h5>Setting up the Bundo tool</h5>
                                 <ol>
@@ -146,9 +159,11 @@ entering the correct folder ind the terminal:
     <code>
 PS C:\Users\Jeppe N. Dyekjær\Documents\3._Datamatiker\Git_projekter_4_semester\Node_JS\NODE_JS_2020\3._jQuery\1._Intro_To_jQuery> npx budo index.js --live --open
     </code>
-    <p> 
-When the command succeeds with a status 200 get response in the terminal, the file will now automatically update in the browser window after each edition to the file.
-    </p>
+                                        <pre>
+
+When the command succeeds with a status 200 get response in the terminal, the file will 
+now automatically update in the browser window after each edition to the file.
+                                        </pre>  
                                     </li>
                                 </ol>
                             </dt>

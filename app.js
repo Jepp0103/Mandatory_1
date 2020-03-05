@@ -60,7 +60,9 @@ app.get("/images/adders.PNG", (req, res) => {
    return res.sendfile(__dirname + '/images/adders.PNG');
 });
 
-
+app.get("/images/getSetContents.PNG", (req, res) => {
+   return res.sendfile(__dirname + '/images/getSetContents.PNG');
+});
 
 //Listens for port number to a given server
 var port = 8080;

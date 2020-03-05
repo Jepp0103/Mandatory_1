@@ -14,35 +14,53 @@
     <button id ="darkButton"></button>
 
     <h1><u>jQuery</u></h1>
-    <button id = "introButton"></button>
-    <br>
-    <pre id = "jQueryBasicInfo">
-jQuery is a fast phased, small library with additional features to JavaScript. The main advantages of using
-jQuery is, that HTML document traversal and manipulation, event handling and animations are on ex. web pages
-much simpler to implement. jQuery is accessed via basic JavaScript.
+    <button id = "hideAllTheoryButton"></button>
+    <div id ="allTheoryInfo">
+        <pre>
+        jQuery is a fast phased, small library with additional features to JavaScript. 
+        The main advantages of using jQuery is, that HTML document traversal and manipulation, 
+        event handling and animations are on ex. web pages much simpler to implement. 
+        jQuery is accessed via basic JavaScript.
+        </pre>
+        <br>
+        <h4>Accessing and manipulating HTML with jQuery</h4>
+        <button id = "introButton"></button>
+        <br>
+        <pre id = "jQueryBasicInfo">
+            The dollar sign, <code><b>$</b></code>, works as an accessor for a given selector tag, id or class declaration etc. 
+            in HTML. The jQuery language can then manipulate the HTML-content. 
+            <code>
+                $("selector").action();
+                //$ = accessor
+            </code>
 
-<h4>Accessing and manipulating HTML with jQuery</h4>
-The dollar sign, <code><b>$</b></code>, works as an accessor for a given selector tag, id or class declaration etc. 
-in HTML. The jQuery language can then manipulate the HTML-content. 
-<code>
-    $("selector").action();
-    //$ = accessor
-</code>
+            Below we can see nearly all possible ways of defining selectors depending on which kind of tag
+            we want the jQuery to refer to in a certain HTML-document. Then the jQuery language are able to
+            manipulate these different selectors with different supported methods (next picture).
+            <br>
+            <img src = "../images/selectors.PNG" id = "selectorsPicture">
+            <br>
+            Methods for adding or inserting different values in HTML:
+            <img src = "../images/adders.PNG" id = "addersPicture">
+            <br>
+            Methods for getting and setting different values in HTML:
+            <img src = "../images/getSetContents.PNG" id = "getSetContentsPicture">
+            <i>All pictures are from www.sololearn.com in the jQuery learning section.</i>
+            <code>
+<b>removeClass();</b> /*The removeClass() method removes one or more class names 
+                        from the selected elements.*/
 
-Below we can see nearly all possible ways of defining selectors depending on which kind of tag
-we want the jQuery to refer to in a certain HTML-document. Then the jQuery language are able to
-manipulate these different selectors with different supported methods (next picture).
-<br>
-<img src = "../images/selectors.PNG" id = "selectorsPicture">
-<i>Picture used from www.sololearn.com in the jQuery learning section.</i>
-<br>
-<img src = "../images/adders.PNG" id = "addersPicture">
-
-</pre>
-    <h4>Playroom with jQuery</h4>
+<b>toggleClass();</b> /*The toggleClass() method toggles between adding/removing 
+                        classes from the selected elements, meaning that if the 
+                        specified class exists for the element, it is removed, and 
+                        if it does not exist, it is added.*/
+            </code>
+        </pre>
+    </div>
+    <h4>jQuery playroom!</h4>
     <p>
         <pre>
-            In this section different examples of the use of jQuery will be demonstrated:
+            In this section different examples on the use of jQuery will be demonstrated:
         </pre>
     </p>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
