@@ -51,6 +51,17 @@ app.get("/jQueries/generaljQuery.js", (req, res) => {
 });
 
 
+//Routing image files
+app.get("/images/selectors.PNG", (req, res) => {
+   return res.sendfile(__dirname + '/images/selectors.PNG');
+});
+
+app.get("/images/adders.PNG", (req, res) => {
+   return res.sendfile(__dirname + '/images/adders.PNG');
+});
+
+
+
 //Listens for port number to a given server
 var port = 8080;
 app.listen(port, error => {

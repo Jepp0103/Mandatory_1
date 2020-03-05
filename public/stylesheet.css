@@ -2,10 +2,21 @@
 p, li, ol, pre, h4, h5, section {
     margin: 0;
     padding: 0;
-    font-size: large;
     font-family: 'Calibri';
     margin-left: auto;
     margin-right: auto;
+}
+
+p, li, ol, pre, section {
+    font-size: large;
+}
+
+h4 {
+    font-size: x-large;
+}
+
+h5 {
+    font-size: large;
 }
 
 code {
@@ -24,4 +35,14 @@ body {
 code, pre {
     display: inline-block; 
     text-align: left;
+}
+
+#selectorsPicture {
+    height: 563px;
+    width: 638px;
+}
+
+#addersPicture {
+    height: 82px;
+    width: 545px;
 }
