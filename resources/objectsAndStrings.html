@@ -12,13 +12,11 @@
     </form>
     <br>
     <button id ="darkButton"></button>
-    <h1><u>Objects and strings</u></h1> <dl>
-        <section>    
-            <dt>
+    <h1><u>Objects and strings</u></h1> <dl>  
                 <h4>Objects</h4>
                 <button id = "objectsButton"></button>
                 <br>
-                    <pre id = "objectsInfo">
+                <pre id = "objectsInfo">
 Objects in JavaScript differs a bit from objects in Java. That means, that objects in JavaScript
 also can act as variables which they can't in Java. Object-variables in JavaScript can contain 
 many values. These values in an object can then be called or changed. Spaces and line breaks in 
@@ -29,44 +27,42 @@ A property in a js-object can be accessed in two different ways:
 <code>objectName.propertyName</code> 
 or
 <code>objectName["propertyName"]</code>
-                    </pre>
-                <dt id = "objectsExampleInfo">
-                    <h5>Example on JavaScript objects</h5>
-                    <pre>
-                        In this example it will be demonstrated how an object gets initialized and how it can be changed and overwrited 
-                        to contain different values of data.
-                        <code>
-var thisSong = {"description": "The best song in the world.", "artist": "Michael Jackson", "song": "Billie Jean"};
+                </pre>
+                <br>
+                <h5>Example on JavaScript objects</h5>
+                <pre id = "objectsExampleInfo">
+                                                            In this example it will be demonstrated how an object gets initialized 
+                                                            and how it can be changed and overwrited to contain different values of data.
+                                    <code>
+            var thisSong = {"description": "The best song in the world.", "artist": "Michael Jackson", "song": "Billie Jean"};
 
-//Removes the property "description" from the object
-delete thisSong.description;
+            //Removes the property "description" from the object
+            delete thisSong.description;
 
-console.log("Only artist:", thisSong.artist);
-console.log("All information:", thisSong)
+            console.log("Only artist:", thisSong.artist);
+            console.log("All information:", thisSong)
 
-//Overwriting the object with a property called "about".
-thisSong = {"about": "Michael Jackson doesn't live any longer"};
-console.log("Overwrited object:", thisSong); 
+            //Overwriting the object with a property called "about".
+            thisSong = {"about": "Michael Jackson doesn't live any longer"};
+            console.log("Overwrited object:", thisSong); 
 
-//Output
-Only artist: Michael Jackson
-All information: { artist: 'Michael Jackson', song: 'Billie Jean' }
-Overwrited object { about: "Michael Jackson doesn't live any longer" }
-                            </code>
-                    </pre>
-                </dt>
+            //Output
+            Only artist: Michael Jackson
+            All information: { artist: 'Michael Jackson', song: 'Billie Jean' }
+            Overwrited object { about: "Michael Jackson doesn't live any longer" }
+                                    </code>
+                </pre>
                 <h4>Strings</h4>
                 <button id = "stringsButton"></button>
-                <p>
-                    <pre id = "stringsInfo">
+                <br>
+                <pre id = "stringsInfo">
 Strings in JavaScript get initialized with the <code><b>var</b></code> declaration 
 and can either be defined as predefined values or as input from an argument in a method.
 A string in JavaScript stores a series of characters. A string can be a text of either 
 double or single quotes.
-                    </pre>
-                </p>
-                   <h5>Example - getting a character from an index in a string</h5>
-                    <pre id = "exampleStringsInfo">
+                </pre>
+                <h5>Example - getting a character from an index in a string</h5>
+                <pre id = "exampleStringsInfo">
 A specific character in a string can be accessed with either the method charAt() or 
 by indexing into the string. Furthermore you could say that a given string is a 
 sort of an array of chars.
@@ -80,9 +76,7 @@ console.log("Array index: " + letters[2]);
 Letters: c
 Array index: c
                             </code>
-                    </pre>
-            </dt>
-        <section>
+                </pre>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../jQueries/objectsAndStringsjQuery.js"></script>
     <script src="../jQueries/generaljQuery.js"></script>
