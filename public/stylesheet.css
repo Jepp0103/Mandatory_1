@@ -38,7 +38,7 @@ code, pre {
 }
 
 
-/* Pictures for the jQuery page */
+/* Hardcoded layout for the pictures on the jQuery page */
 #selectorsPicture {
     height: 563px;
     width: 638px;
@@ -52,4 +52,13 @@ code, pre {
 #getSetContentsPicture {
     height: 150px;
     width: 650px;
+}
+
+#mouseOverPicture {
+    width: 960px;
+    height: 540px;
+}
+
+#lionInfo {
+    size: 1000px;
 }

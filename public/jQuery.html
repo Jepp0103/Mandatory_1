@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../public/stylesheet.css">
-    <title>jQuery and routing</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>jQuery</title>
 </head>
 <body>
     <form action="/">
@@ -38,13 +39,13 @@
             we want the jQuery to refer to in a certain HTML-document. Then the jQuery language are able to
             manipulate these different selectors with different supported methods (next picture).
             <br>
-            <img src = "../images/selectors.PNG" id = "selectorsPicture">
+            <img src = "selectors.PNG" id = "selectorsPicture">
             <br>
             Methods for adding or inserting different values in HTML:
-            <img src = "../images/adders.PNG" id = "addersPicture">
+            <img src = "adders.PNG" id = "addersPicture">
             <br>
             Methods for getting and setting different values in HTML:
-            <img src = "../images/getSetContents.PNG" id = "getSetContentsPicture">
+            <img src = "getSetContents.PNG" id = "getSetContentsPicture">
             <i>All pictures are from www.sololearn.com in the jQuery learning section.</i>
             <code>
 <b>removeClass();</b> /*The removeClass() method removes one or more class names 
@@ -57,14 +58,35 @@
             </code>
         </pre>
     </div>
-    <h4>jQuery playroom!</h4>
-    <p>
+    <h4>jQuery playroom</h4>
+    <pre>
+        In this section different examples on the use of jQuery will be demonstrated:
+
+        <b>Hover on the baby lion to get a surprise!</b>
+    </pre>
+    <p id = "clickToLearn"><b>Wraaaaaagh! A full grown male lion! Click on the full grown lion to learn more about lions.</b></p>
+    <br>
+    <img id = "mouseOverPicture" src = "babyLion.JPG">
+    <div id = "lionInfo" title = "Lions">
         <pre>
-            In this section different examples on the use of jQuery will be demonstrated:
+            The lion (Panthera leo) is a species in the family Felidae; it is a muscular, 
+            deep-chested cat with a short, rounded head, a reduced neck and round ears, and 
+            a hairy tuft at the end of its tail. It is sexually dimorphic; adult male lions 
+            have a prominent mane, which is the most recognisable feature of the species. With 
+            a typical head-to-body length of 184–208 cm (72–82 in) they are larger than females
+            at 160–184 cm (63–72 in). It is a social species, forming groups called prides. A lion
+            pride consists of a few adult males, related females and cubs. Groups of female lions 
+            usually hunt together, preying mostly on large ungulates. The lion is an apex and keystone 
+            predator, although some lions scavenge when opportunities occur, and have been known to hunt 
+            humans, although the species typically does not.
+
+            From:  <b><a href="https://en.wikipedia.org/wiki/Lion">Lion - Wikipedia</a></b>
         </pre>
-    </p>    
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../jQueries/jQueryjQuery.js"></script>
     <script src="../jQueries/generaljQuery.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 </html>

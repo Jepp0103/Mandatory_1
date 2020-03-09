@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../public/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <title>Commands and tools</title>
 </head>
 <body>
@@ -46,10 +46,10 @@
                     </dt>
                     <br>
                     <dt>
-    <h4>Routing</h4>
+    <h4>Routing and callback function</h4>
     <button id = "routingButton"></button>
     <br>
-    <pre>
+    <pre id = "routingInfo">
     Routing is about how endpoints of applications (URIs) respond to client requests.
     Routing in Express is defined by using certain methods in the Express environment which
     corresponds to HTTP-methods ex. <code><b>app.get()</b></code> to handle GET requests, 
@@ -57,10 +57,20 @@
     to handle all types of HTTP-methods at once.
 
     All these routing methods specify a callback function (handler functions), which is 
-    called when an application receives a to a specified endpoint. We make the application
+    called when an application receives a request to a specified endpoint. We make the application
     listen for certain routes and methods in order to detect a match.
 
-    Routing methods can have multiple callback functions as arguments
+    Routing methods can have multiple callback functions as arguments. When having to use
+    the next defined callback function after the first, you have to use the method 
+    <code><b>next()</b></code> to enter that one.
+
+    The over all definition and method call declaration of a route looks like this
+    <code><b>app.METHOD(PATH, HANDLER);</b></code>
+
+    <code><b>app</b></code>: an instance of express.
+    <code><b>METHOD</b></code>: an HTTP request method, in lowercase.
+    <code><b>PATH</b></code>: a path to a given server.
+    <code><b>HANDLER</b></code>: a function executed when the route matches the function.
 
     </pre>
                     </dt>
@@ -85,8 +95,7 @@
                             <code>
                         { 
                             "dependencies": { 
-                                "express": "4.17.1", 
-                                "request": "^2.88.2" 
+                                "express": "4.17.1" 
                             } 
                         } 
                             </code>

@@ -1,7 +1,7 @@
 //jQuery hide and show buttons for the jQuery page
     //Hide all theory button
-    var hideAllTheoryButton = "#hideAllTheoryButton"
-    var allTheoryInfo = "#allTheoryInfo"
+    var hideAllTheoryButton = "#hideAllTheoryButton";
+    var allTheoryInfo = "#allTheoryInfo";
     $(hideAllTheoryButton).css("background-color", "#ff3333");
     var allTheoryClickCount = 0;
     $(hideAllTheoryButton).text("Hide all theory and try jQuery playroom!");
@@ -27,8 +27,8 @@
 
 
   //Accessing and manipulating HTML section
-  var introButton = "#introButton"
-  var jQueryBasicInfo = "#jQueryBasicInfo"
+  var introButton = "#introButton";
+  var jQueryBasicInfo = "#jQueryBasicInfo";
   $(introButton).css("background-color", "#ff3333");
   var clickCount = 0;
   $(introButton).text("Hide accessing and manipulation");
@@ -52,4 +52,26 @@
       clickCount++;
   });
 
-  
+  //Mouseover/mouse leave picture - baby lion to grown up lion - and angry lion
+  $("#clickToLearn").hide();
+  $("#lionInfo").hide();
+
+  $("#mouseOverPicture").mouseover(() => {
+    $("#mouseOverPicture").attr("src", "grownLion.JPG");
+    $("#clickToLearn").show();
+  });
+
+  $("#mouseOverPicture").mouseleave(() => {
+    $("#mouseOverPicture").attr("src", "babyLion.JPG");
+    $("#clickToLearn").hide();
+  });
+
+  //Alert box with info about lions
+  $("#mouseOverPicture").on("click", function() {
+    console.log("Picture clicked");
+    $(function() {
+      $("#lionInfo").dialog({
+        width: 800
+      });
+    });  
+  }); 

@@ -1,32 +1,30 @@
 //The way to import a package from node modules 
 const express = require("express");
 const app = express();
-const request = require("request");
+
+//Using express static method call, so there is no need of routing to every single file in the folders public and images
+app.use(express.static('public'));
+app.use(express.static('images'));
 
 //Routing and getting HTML-files
 app.get("/arraysAndLoops", (req, res) => {
-    return res.sendfile(__dirname + '/resources/arraysAndLoops.html');
+    return res.sendfile(__dirname + '/public/arraysAndLoops.html');
  });
 
 app.get("/objectsAndStrings", (req, res) => {
-   return res.sendfile(__dirname + '/resources/objectsAndStrings.html');
+   return res.sendfile(__dirname + '/public/objectsAndStrings.html');
 });
 
  app.get("/commandsAndTools", (req, res) => {
-    return res.sendfile(__dirname + '/resources/commandsAndTools.html');
+    return res.sendfile(__dirname + '/public/commandsAndTools.html');
  });
 
  app.get("/jQuery", (req, res) => {
-    return res.sendfile(__dirname + '/resources/jQuery.html');
+    return res.sendfile(__dirname + '/public/jQuery.html');
  });
 
  app.get("/", (req, res) => {
-   return res.sendfile(__dirname + '/resources/main.html');
-});
-
- //Routing css file
- app.get('/public/stylesheet.css', (req, res) => {
-   return res.sendfile(__dirname + '/public/stylesheet.css');
+   return res.sendfile(__dirname + '/public/main.html');
 });
 
 //Routing jQuery-files
@@ -48,20 +46,6 @@ app.get("/jQueries/objectsAndStringsjQuery.js", (req, res) => {
 
 app.get("/jQueries/generaljQuery.js", (req, res) => {
    return res.sendfile(__dirname + '/jQueries/generaljQuery.js');
-});
-
-
-//Routing image files
-app.get("/images/selectors.PNG", (req, res) => {
-   return res.sendfile(__dirname + '/images/selectors.PNG');
-});
-
-app.get("/images/adders.PNG", (req, res) => {
-   return res.sendfile(__dirname + '/images/adders.PNG');
-});
-
-app.get("/images/getSetContents.PNG", (req, res) => {
-   return res.sendfile(__dirname + '/images/getSetContents.PNG');
 });
 
 //Listens for port number to a given server
