@@ -52,26 +52,36 @@
       clickCount++;
   });
 
-  //Mouseover/mouse leave picture - baby lion to grown up lion - and angry lion
-  $("#clickToLearn").hide();
+  //Mouseover/mouse leave picture - baby lion to grown up lion
   $("#lionInfo").hide();
 
   $("#mouseOverPicture").mouseover(() => {
     $("#mouseOverPicture").attr("src", "grownLion.JPG");
-    $("#clickToLearn").show();
+    $("#clickToLearn").text("Wraaaaaagh! The baby lion turned into a full grown male lion! Click on the lion to learn more about lions.");
+    $("#clickToLearn").css("font-weight","Bold");
   });
 
   $("#mouseOverPicture").mouseleave(() => {
     $("#mouseOverPicture").attr("src", "babyLion.JPG");
-    $("#clickToLearn").hide();
+    $("#clickToLearn").text("Hover on the baby lion to get a surprise!");
+    $("#clickToLearn").css("font-weight","Bold");
   });
 
   //Alert box with info about lions
   $("#mouseOverPicture").on("click", function() {
     console.log("Picture clicked");
     $(function() {
-      $("#lionInfo").dialog({
-        width: 800
-      });
+      $("#lionText, #lionLink").css("color", "black")
+      $("#lionInfo").dialog({width: 800});
     });  
   }); 
+
+  // jquery ready start
+$(document).ready(function() {
+	// jQuery code
+$('.widget-btn').click(function(e) {
+      e.preventDefault();
+        $(".widget").toggleClass('active');
+    });
+}); 
+// jquery end

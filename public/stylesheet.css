@@ -62,3 +62,14 @@ code, pre {
 #lionInfo {
     size: 1000px;
 }
+
+.widget{position:fixed;  left:-300px; width:300px; top:45%; 
+    border:1px solid #ccc; background-color:#ddd;
+    }
+    .widget.active{ animation: siljish 500ms; animation-fill-mode: forwards; }
+    .widget-content{padding:15px; position:relative}
+    .widget-btn{position:absolute; left:100%; top:0; background-color:yellow; }
+    @keyframes siljish{
+      from{left:-300px;}
+      to{left:0px;}
+    }
