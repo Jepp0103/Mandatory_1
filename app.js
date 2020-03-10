@@ -27,7 +27,7 @@ app.get("/objectsAndStrings", (req, res) => {
    return res.sendfile(__dirname + '/public/main.html');
 });
 
-//Routing jQuery-files
+//Routing and getting jQuery-js-files
  app.get("/jQueries/jQueryjQuery.js", (req, res) => {
    return res.sendfile(__dirname + '/jQueries/jQueryjQuery.js');
 });

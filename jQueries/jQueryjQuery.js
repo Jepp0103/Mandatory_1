@@ -4,7 +4,7 @@
     var allTheoryInfo = "#allTheoryInfo";
     $(hideAllTheoryButton).css("background-color", "#ff3333");
     var allTheoryClickCount = 0;
-    $(hideAllTheoryButton).text("Hide all theory and try jQuery playroom!");
+    $(hideAllTheoryButton).text("Hide all theory and try the jQuery example");
   
     $(hideAllTheoryButton).click(() => {
         console.log("Button clicked");
@@ -18,7 +18,7 @@
   
         else {
           $(allTheoryInfo).toggle();
-          $(hideAllTheoryButton).text("Hide all theory and try jQuery playroom!");
+          $(hideAllTheoryButton).text("Hide all theory and try the jQuery example");
           $(hideAllTheoryButton).css("background-color", "#ff3333");
         }
         

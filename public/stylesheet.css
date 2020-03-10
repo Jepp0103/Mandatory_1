@@ -68,7 +68,7 @@ code, pre {
     font-weight: bold;
 }
 
-.widget{position:fixed;  left:-300px; width:350px; top:45%; 
+.widget{position:fixed;  left:-300px; width:350px; top:25%; 
     border:1px solid #ccc; background-color:#ddd;
     border-radius: 20%;
     }

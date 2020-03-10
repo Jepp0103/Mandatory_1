@@ -14,7 +14,7 @@ $("#darkButton").click(() => {
         $("#darkButton").css("background-color", "white");
         $("#darkButton").css("color", "black");
         $("body").css("background-color", "black");
-        $(tags).css("color", "white")
+        $(tags).css("color", "white");
     }
 
     else {
@@ -22,7 +22,7 @@ $("#darkButton").click(() => {
         $("#darkButton").css("background-color", "black");
         $("#darkButton").css("color", "white");
         $("body").css("background-color", "white");
-        $(tags).css("color", "black")
+        $(tags).css("color", "black");
     }
     darkClickCount++;
 });
