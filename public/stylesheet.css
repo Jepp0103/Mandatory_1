@@ -63,8 +63,14 @@ code, pre {
     size: 1000px;
 }
 
-.widget{position:fixed;  left:-300px; width:300px; top:45%; 
+.widget-btn  {
+    font-size: large;
+    font-weight: bold;
+}
+
+.widget{position:fixed;  left:-300px; width:350px; top:45%; 
     border:1px solid #ccc; background-color:#ddd;
+    border-radius: 20%;
     }
     .widget.active{ animation: siljish 500ms; animation-fill-mode: forwards; }
     .widget-content{padding:15px; position:relative}
@@ -73,3 +79,13 @@ code, pre {
       from{left:-300px;}
       to{left:0px;}
     }
+
+.widget-content {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.widget-content, .widget, .widget-btn {
+    font-family: 'Calibri';
+}

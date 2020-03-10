@@ -26,3 +26,12 @@ $("#darkButton").click(() => {
     }
     darkClickCount++;
 });
+
+  // Widget - jquery ready start
+  $(document).ready(function() {
+        // jQuery code
+    $('.widget-btn').click(function(e) {
+        e.preventDefault();
+            $(".widget").toggleClass('active');
+        });
+    }); 
