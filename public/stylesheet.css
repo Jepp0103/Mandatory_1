@@ -59,6 +59,14 @@ code, pre {
     height: 540px;
 }
 
+#npmInitPicture {
+    width: 794px;
+    height: 494px;
+}
+
+
+/*jQuery lion and widget panel*/
+
 #lionInfo {
     size: 1000px;
 }
@@ -68,7 +76,7 @@ code, pre {
     font-weight: bold;
 }
 
-.widget{position:fixed;  left:-300px; width:350px; top:25%; 
+.widget{position:fixed;  left:-350px; width:350px; top:25%; 
     border:1px solid #ccc; background-color:#ddd;
     border-radius: 20%;
     }

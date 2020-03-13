@@ -16,7 +16,6 @@
         <h1><u>Commands and tools</u></h1>
             <dl>
                 <section>    
-                    <dt>
                         <h4>Node</h4>
                         <button id = "nodeButton"></button>
                         <p>
@@ -43,37 +42,62 @@
                                 <u><b>node app.js</b></u>
                             </code>
                         </dt>
-                    </dt>
                     <br>
+               
                     <dt>
-    <h4>Routing and callback function</h4>
-    <button id = "routingButton"></button>
-    <br>
-    <pre id = "routingInfo">
-    Routing is about how endpoints of applications (URIs) respond to client requests.
-    Routing in Express is defined by using certain methods in the Express environment which
-    corresponds to HTTP-methods ex. <code><b>app.get()</b></code> to handle GET requests, 
-    <code><b>app.post()</b></code> to handle POST requests or <code><b>app.all()</b></code>
-    to handle all types of HTTP-methods at once.
+                        <h4>npm</h4>
+                        <button id = "npmButton"></button>
+                        <br>
+                        <pre id = "npmInfo">
+npm which stands for Node Package Manager is a package manager for the JavaScript programming language. 
+npm is the default runtime environment for Node.js. The environment contains a command line client, 
+which is called npm and an online database of public and paid private packages (npm registry). The 
+registry is accessed from a client ex. a PC or local webpage. From there the client can browse through 
+the different available packages from the npm website.
+                        </pre>
+                        <br>
+                        <h5>npm run start</h5>
+                        <pre id = "npmRunInfo">
+npm run start can be used to run predefined scripts in the terminal. The scripts are defined in the 
+<code>package.json</code>-file. So instead of typing many different commands after each other in the 
+terminal to run a certain application all those commands can be predefined as script in the mentioned
+json-file by writing the following script:
+                                <code>
+{
+    "scripts": {
+        "start": "node app.js",
+        "start-dev": "nodemon app.js"
+    }
+}
+                                </code>
+Now all these commands and even more commands if added can be executed at the same time by only running
+the command <code>npm run start</code>. It makes it a lot easier to execute many operations at the same time.
+Furthermore if the code for the given file has been implemented with the right code to define an own portnumber
+when running an application, the following script can be extended with the attribute <code>cross-env PORT=?</code>:
+                                <code>
+    {
+        "scripts": {
+            "start": "cross-env PORT=80 node app.js",
+            "start-dev": "cross-env nodemon app.js set PORT=3000"
+        },
+        "devDependencies": {
+            "cross-env": "^7.0.2"
+        }
+    }
+                                </code>
+                        </pre>
+                        <br>
+                        <h5>npm init</h5>
+                        <pre id = "npmInitInfo">
+<code>npm init < initializer ></code> is an npm-command which can be used to set up a new or existing 
+npm package. The initialized and defined package will look like the following picture where certain 
+descriptive attributes will be added to the <code>package.json</code>-file. <code>"devDependencies"</code>:
+are packages that are used for local development and testing, where as <code>"dependencies"</code> are required for
+an application to actually run: 
 
-    All these routing methods specify a callback function (handler functions), which is 
-    called when an application receives a request to a specified endpoint. We make the application
-    listen for certain routes and methods in order to detect a match.
-
-    Routing methods can have multiple callback functions as arguments. When having to use
-    the next defined callback function after the first, you have to use the method 
-    <code><b>next()</b></code> to enter that one.
-
-    The over all definition and method call declaration of a route looks like this
-    <code><b>app.METHOD(PATH, HANDLER);</b></code>
-
-    <code><b>app</b></code>: an instance of express.
-    <code><b>METHOD</b></code>: an HTTP request method, in lowercase.
-    <code><b>PATH</b></code>: a path to a given server.
-    <code><b>HANDLER</b></code>: a function executed when the route matches the function.
-
-    </pre>
-                    </dt>
+                        </pre>
+                        <br>
+                        <img src = "npmInit.PNG" id = "npmInitPicture">
                     <dt>
                         <h4>Express</h4>
                             <button id = "expressButton"></button>
@@ -198,6 +222,9 @@ now automatically update in the browser window after each edition to the file.
             <br>            
             <br>
             <a href="/jQuery"> jQuery</a>
+            <br>
+            <br>
+            <a href="/routingAndRequests"> Routing and requests</a>
         </div>
      </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -23,6 +23,10 @@ app.get("/objectsAndStrings", (req, res) => {
     return res.sendfile(__dirname + '/public/jQuery.html');
  });
 
+ app.get("/routingAndRequests", (req, res) => {
+   return res.sendfile(__dirname + '/public/routingAndRequests.html');
+});
+
  app.get("/", (req, res) => {
    return res.sendfile(__dirname + '/public/main.html');
 });
@@ -42,6 +46,10 @@ app.get("/jQueries/arraysAndLoopsjQuery.js", (req, res) => {
 
 app.get("/jQueries/objectsAndStringsjQuery.js", (req, res) => {
    return res.sendfile(__dirname + '/jQueries/objectsAndStringsjQuery.js');
+});
+
+app.get("/jQueries/routingAndRequestsjQuery.js", (req, res) => {
+   return res.sendfile(__dirname + '/jQueries/routingAndRequestsjQuery.js');
 });
 
 app.get("/jQueries/generaljQuery.js", (req, res) => {

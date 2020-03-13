@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/">
+        <button id="backToMainButton" href="/">Back to main page</button>
+    </form>
+    <br>
+    <button id ="darkButton"></button>
+    <h1><u>Routing and requests</u></h1>
+    <dt>
+        <h4>Routing and callback function</h4>
+        <button id = "routingButton"></button>
+        <br>
+        <pre id = "routingInfo">
+            Routing is about how endpoints of applications (URIs) respond to client requests.
+            Routing in Express is defined by using certain methods in the Express environment which
+            corresponds to HTTP-methods ex. <code><b>app.get()</b></code> to handle GET requests, 
+            <code><b>app.post()</b></code> to handle POST requests or <code><b>app.all()</b></code>
+            to handle all types of HTTP-methods at once.
+        
+            All these routing methods specify a callback function (handler functions), which is 
+            called when an application receives a request to a specified endpoint. We make the application
+            listen for certain routes and methods in order to detect a match.
+        
+            Routing methods can have multiple callback functions as arguments. When having to use
+            the next defined callback function after the first, you have to use the method 
+            <code><b>next()</b></code> to enter that one.
+        
+            The over all definition and method call declaration of a route looks like this
+            <code><b>app.METHOD(PATH, HANDLER);</b></code>
+        
+            <code><b>app</b></code>: an instance of express.
+            <code><b>METHOD</b></code>: an HTTP request method, in lowercase.
+            <code><b>PATH</b></code>: a path to a given server.
+            <code><b>HANDLER</b></code>: a function executed when the route matches the function.
+        </pre>
+    </dt>
+    <div class="widget">
+        <button class="widget-btn" href="#">Page <br> shortcuts</button>
+        <div class="widget-content">
+            <a href="/">Main</a>
+            <br>
+            <br>
+            <a href="/arraysAndLoops"> Arrays and loops</a>
+            <br>
+            <br>
+            <a href="/objectsAndStrings"> Objects and strings</a>
+            <br>
+            <br>
+            <a href="/commandsAndTools"> Commands and tools</a>
+            <br>            
+            <br>
+            <a href="/jQuery"> jQuery</a>
+            <br>
+            <br>
+            <a href="/routingAndRequests"> Routing and requests</a>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../jQueries/routingAndRequestsjQuery.js"></script>
+    <script src="../jQueries/generaljQuery.js"></script>
+</body>
+</html>
