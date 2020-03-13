@@ -55,12 +55,13 @@ which is called npm and an online database of public and paid private packages (
 registry is accessed from a client ex. a PC or local webpage. From there the client can browse through 
 the different available packages from the npm website.
                         </pre>
-                        <br>
+                    </dt>
+                    <dt id = "npmRunInfo">
                         <h5>npm run start</h5>
-                        <pre id = "npmRunInfo">
+                        <pre>
 npm run start can be used to run predefined scripts in the terminal. The scripts are defined in the 
 <code>package.json</code>-file. So instead of typing many different commands after each other in the 
-terminal to run a certain application all those commands can be predefined as script in the mentioned
+terminal to run a certain application, all those commands can be predefined as script in the mentioned
 json-file by writing the following script:
                                 <code>
 {
@@ -71,9 +72,9 @@ json-file by writing the following script:
 }
                                 </code>
 Now all these commands and even more commands if added can be executed at the same time by only running
-the command <code>npm run start</code>. It makes it a lot easier to execute many operations at the same time.
+the command <code><b>npm run start</b></code>. It makes it a lot easier to execute many operations at the same time.
 Furthermore if the code for the given file has been implemented with the right code to define an own portnumber
-when running an application, the following script can be extended with the attribute <code>cross-env PORT=?</code>:
+when running an application, the following script can be extended with the attribute <code><b>cross-env PORT=?</b></code>:
                                 <code>
     {
         "scripts": {
@@ -86,18 +87,19 @@ when running an application, the following script can be extended with the attri
     }
                                 </code>
                         </pre>
-                        <br>
+                    </dt>
+                    <dt id = "npmInitInfo">
                         <h5>npm init</h5>
-                        <pre id = "npmInitInfo">
+                        <pre>
 <code>npm init < initializer ></code> is an npm-command which can be used to set up a new or existing 
 npm package. The initialized and defined package will look like the following picture where certain 
-descriptive attributes will be added to the <code>package.json</code>-file. <code>"devDependencies"</code>:
-are packages that are used for local development and testing, where as <code>"dependencies"</code> are required for
-an application to actually run: 
-
+descriptive attributes will be added to the <code>package.json</code>-file.
+<code>"devDependencies"</code> are packages that are used for local development and testing, where as 
+<code>"dependencies"</code> are required for an application to actually run: 
                         </pre>
                         <br>
                         <img src = "npmInit.PNG" id = "npmInitPicture">
+                    </dt>
                     <dt>
                         <h4>Express</h4>
                             <button id = "expressButton"></button>

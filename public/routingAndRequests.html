@@ -24,7 +24,7 @@
             <code><b>app.post()</b></code> to handle POST requests or <code><b>app.all()</b></code>
             to handle all types of HTTP-methods at once.
         
-            All these routing methods specify a callback function (handler functions), which is 
+            All these routing methods specify a callback function (handler function), which is 
             called when an application receives a request to a specified endpoint. We make the application
             listen for certain routes and methods in order to detect a match.
         
@@ -39,6 +39,74 @@
             <code><b>METHOD</b></code>: an HTTP request method, in lowercase.
             <code><b>PATH</b></code>: a path to a given server.
             <code><b>HANDLER</b></code>: a function executed when the route matches the function.
+        </pre>
+    </dt>
+    <dt>
+        <h4>HTTP Requests</h4>
+        <pre id = "requestInfo">
+        An HTTP client sends a request to a given server as a request message which includes the following
+        elements:
+            1. A request line
+            2. Zero or more header fields.
+            3. An empty line which indicates the end of a header field.
+            4. Optionally a message body.
+
+        <b>Supported methods for HTTP requests:</b>
+            GET
+            POST
+            PUT
+            DELETE
+        </pre>
+        <pre id = "requestsInfo">
+            <code>
+                                    var cars = [
+                                        { 
+                                            "id": 1, 
+                                            "brand": "Mercedes"
+                                        },           
+                                        {
+                                            "id": 2,
+                                            "brand": "Peugeot"
+                                        },
+                                        {
+                                            "id": 3,
+                                            "brand": "Lamborgini"
+                                        }
+                                    ]
+
+                                    app.post("/cars", (req, res) => {
+                                        console.log(req.body);
+                                    
+                                        let newCar = req.body;
+                                        newCar.id = ++currentId;
+                                        console.log(newCar);
+                                        cars.push(newCar);
+                                    
+                                        return res.send({response: {}});
+                                    });
+                                    
+                                    app.put("cars/:id", (req, res) => {
+                                        const foundIndex = cars.findIndex(car => car.id === Number(req.params.id));
+                                        delete req.body.id;
+                                        console.log("0000", foundIndex);
+                                        const updatedCar = { ...cars[foundIndex], ...req.body };
+                                        cars[foundIndex] = updatedCar;
+                                    
+                                        return res.send({ response: cars});
+                                    });
+                                    
+                                    app.delete("/cars/:id", (req, res) => {
+                                        cars = cars.filter(car => car.id !== Number(req.params.id)) //looping through each car in the list and getting the id from the body
+                                        //Number passes a string to an int
+                                        return res.send({ response: cars });
+                                    });
+
+
+
+            </code>
+
+
+
         </pre>
     </dt>
     <div class="widget">
