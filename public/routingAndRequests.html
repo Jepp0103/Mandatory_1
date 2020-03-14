@@ -52,12 +52,18 @@
             4. Optionally a message body.
 
         <b>Supported methods for HTTP requests:</b>
-            GET
-            POST
-            PUT
-            DELETE
-        </pre>
-        <pre id = "requestsInfo">
+            <b>GET:</b> the GET method is used to receive information from a server by using a certain URI.
+                GET methods only receives data and does not affect any data.
+            <b>POST:</b> the POST method is used to send data to a server which can be text based or file
+                based
+            <b>PUT:</b> the PUT method is used to update or edit existing data on the server ex. texts or
+                files.
+            <b>DELETE:</b> removes all representations of text or file defined in the URL.
+            </pre>
+
+        <pre id = "requestsExamples">
+            In the following example we will take a look on how the POST-, PUT- and DELETE-methods can be used. 
+            In the beginning we define an array with objects describing a car including id and brand:
             <code>
                                     var cars = [
                                         { 
@@ -73,7 +79,15 @@
                                             "brand": "Lamborgini"
                                         }
                                     ]
-
+            </code>
+            Afterwards an example on how to use the post request is given below. The application tries to add 
+            certain data to the URL /cars by only having to type in a new brand from a user. The id will be 
+            auto incremented (generated) when adding a new car, so a user doesn't need to write the id:
+            At first the <code>newCar</code>-object is instantiated by the input of the request body - <code>req.body</code>
+            When defining the id variable in the car object it takes the current/maximum car id in the cars list and 
+            increments the number by 1 to define the new id. When the id has been added the object car is added to the 
+            list with the <code>push()</code>-method. At the end the result returns a response body:
+            <code>
                                     app.post("/cars", (req, res) => {
                                         console.log(req.body);
                                     
@@ -84,7 +98,8 @@
                                     
                                         return res.send({response: {}});
                                     });
-                                    
+            </code>
+            <code>
                                     app.put("cars/:id", (req, res) => {
                                         const foundIndex = cars.findIndex(car => car.id === Number(req.params.id));
                                         delete req.body.id;
@@ -94,7 +109,9 @@
                                     
                                         return res.send({ response: cars});
                                     });
-                                    
+            </code>                    
+            
+            <code>
                                     app.delete("/cars/:id", (req, res) => {
                                         cars = cars.filter(car => car.id !== Number(req.params.id)) //looping through each car in the list and getting the id from the body
                                         //Number passes a string to an int
@@ -104,9 +121,6 @@
 
 
             </code>
-
-
-
         </pre>
     </dt>
     <div class="widget">
