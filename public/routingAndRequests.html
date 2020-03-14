@@ -19,14 +19,14 @@
         <br>
         <pre id = "routingInfo">
             Routing is about how endpoints of applications (URIs) respond to client requests.
-            Routing in Express is defined by using certain methods in the Express environment which
-            corresponds to HTTP-methods ex. <code><b>app.get()</b></code> to handle GET requests, 
-            <code><b>app.post()</b></code> to handle POST requests or <code><b>app.all()</b></code>
+            Routing in Express is defined by using certain methods in the Express environment
+            which corresponds to HTTP-methods ex. <code><b>app.get()</b></code> to handle GET 
+            requests, <code><b>app.post()</b></code> to handle POST requests or <code><b>app.all()</b></code>
             to handle all types of HTTP-methods at once.
         
             All these routing methods specify a callback function (handler function), which is 
-            called when an application receives a request to a specified endpoint. We make the application
-            listen for certain routes and methods in order to detect a match.
+            called when an application receives a request to a specified endpoint. We make the 
+            application listen for certain routes and methods in order to detect a match.
         
             Routing methods can have multiple callback functions as arguments. When having to use
             the next defined callback function after the first, you have to use the method 
@@ -40,30 +40,29 @@
             <code><b>PATH</b></code>: a path to a given server.
             <code><b>HANDLER</b></code>: a function executed when the route matches the function.
         </pre>
-    </dt>
-    <dt>
+
         <h4>HTTP Requests</h4>
-        <pre id = "requestInfo">
-        An HTTP client sends a request to a given server as a request message which includes the following
-        elements:
+        <pre id = "requestsInfo">
+        An HTTP client sends a request to a given server as a request message which includes the 
+        following elements:
             1. A request line
             2. Zero or more header fields.
             3. An empty line which indicates the end of a header field.
             4. Optionally a message body.
 
         <b>Supported methods for HTTP requests:</b>
-            <b>GET:</b> the GET method is used to receive information from a server by using a certain URI.
-                GET methods only receives data and does not affect any data.
-            <b>POST:</b> the POST method is used to send data to a server which can be text based or file
-                based
-            <b>PUT:</b> the PUT method is used to update or edit existing data on the server ex. texts or
-                files.
+            <b>GET:</b> the GET method is used to receive information from a server by using a 
+                certain URI. GET methods only receives data and does not affect any data.
+            <b>POST:</b> the POST method is used to send data to a server which can be text based 
+                or file based.
+            <b>PUT:</b> the PUT method is used to update or edit existing data on the server ex. 
+                texts or files.
             <b>DELETE:</b> removes all representations of text or file defined in the URL.
-            </pre>
-
-        <pre id = "requestsExamples">
-            In the following example we will take a look on how the POST-, PUT- and DELETE-methods can be used. 
-            In the beginning we define an array with objects describing a car including id and brand:
+        
+        <b>Example on different request in Express:</b>
+            In the following example we will take a look on how the POST-, PUT- and DELETE-methods 
+            can be used. In the beginning we define an array with objects describing a car including
+            id and brand:
             <code>
                                     var cars = [
                                         { 
@@ -83,40 +82,46 @@
             Afterwards an example on how to use the post request is given below. The application tries to add 
             certain data to the URL /cars by only having to type in a new brand from a user. The id will be 
             auto incremented (generated) when adding a new car, so a user doesn't need to write the id:
-            At first the <code>newCar</code>-object is instantiated by the input of the request body - <code>req.body</code>
-            When defining the id variable in the car object it takes the current/maximum car id in the cars list and 
-            increments the number by 1 to define the new id. When the id has been added the object car is added to the 
-            list with the <code>push()</code>-method. At the end the result returns a response body:
+            At first the <code>newCar</code>-object is instantiated by the input of the request body 
+            - <code>req.body</code>. When defining the id variable in the car object it takes the current/maximum
+            car id in the cars list and increments the number by 1 to define the new id. When the id has been 
+            added to the object, then the car object is added to the list with the <code>push()</code>-method. 
+            At the end the result returns a response body:
             <code>
-                                    app.post("/cars", (req, res) => {
-                                        console.log(req.body);
-                                    
-                                        let newCar = req.body;
-                                        newCar.id = ++currentId;
-                                        console.log(newCar);
-                                        cars.push(newCar);
-                                    
-                                        return res.send({response: {}});
-                                    });
+            app.post("/cars", (req, res) => {
+                console.log(req.body);
+            
+                let newCar = req.body;
+                newCar.id = ++currentId;
+                console.log(newCar);
+                cars.push(newCar);
+            
+                return res.send({response: {}});
+            });
             </code>
+
+            In the next example we will look at the PUT-method in order to update details about an already existing car object. 
+            At first an index is initialized by using the <code>findexIndex()</code>-method where number of the id from the 
+            request parameter in the method body is used as index number. Then we know what id is 
             <code>
-                                    app.put("cars/:id", (req, res) => {
-                                        const foundIndex = cars.findIndex(car => car.id === Number(req.params.id));
-                                        delete req.body.id;
-                                        console.log("0000", foundIndex);
-                                        const updatedCar = { ...cars[foundIndex], ...req.body };
-                                        cars[foundIndex] = updatedCar;
-                                    
-                                        return res.send({ response: cars});
-                                    });
+            app.put("cars/:id", (req, res) => {
+                const foundIndex = cars.findIndex(car => car.id === Number(req.params.id));
+                delete req.body.id;
+                console.log("0000", foundIndex);
+                const updatedCar = { ...cars[foundIndex], ...req.body };
+                cars[foundIndex] = updatedCar;
+            
+                return res.send({ response: cars});
+            });
             </code>                    
             
             <code>
-                                    app.delete("/cars/:id", (req, res) => {
-                                        cars = cars.filter(car => car.id !== Number(req.params.id)) //looping through each car in the list and getting the id from the body
-                                        //Number passes a string to an int
-                                        return res.send({ response: cars });
-                                    });
+            app.delete("/cars/:id", (req, res) => {
+                //looping through each car in the list and getting the id from the body
+                cars = cars.filter(car => car.id !== Number(req.params.id)) 
+                //Number passes a string to an int
+                return res.send({ response: cars });
+            });
 
 
 
