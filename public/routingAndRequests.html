@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <title>Document</title>
+    <title>Routing and requests</title>
 </head>
 <body>
     <form action="/">
@@ -32,7 +32,7 @@
             the next defined callback function after the first, you have to use the method 
             <code><b>next()</b></code> to enter that one.
         
-            The over all definition and method call declaration of a route looks like this
+            The over all definition and method call declaration of a route looks like this:
             <code><b>app.METHOD(PATH, HANDLER);</b></code>
         
             <code><b>app</b></code>: an instance of express.
@@ -42,6 +42,8 @@
         </pre>
 
         <h4>HTTP Requests</h4>
+        <button id = "requestsButton"></button>
+        <br>
         <pre id = "requestsInfo">
         An HTTP client sends a request to a given server as a request message which includes the 
         following elements:
@@ -57,11 +59,11 @@
                 or file based.
             <b>PUT:</b> the PUT method is used to update or edit existing data on the server ex. 
                 texts or files.
-            <b>DELETE:</b> removes all representations of text or file defined in the URL.
+            <b>DELETE:</b> removes all representations of text or files defined in the URL.
         
         <b>Example on different request in Express:</b>
-            In the following example we will take a look on how the POST-, PUT- and DELETE-methods 
-            can be used. In the beginning we define an array with objects describing a car including
+            In the following examples we will take a look on how the POST-, PUT- and DELETE-methods 
+            can be used. In the beginning we define an array of objects describing a car including
             id and brand:
             <code>
                                     var cars = [
@@ -81,11 +83,11 @@
             </code>
             Afterwards an example on how to use the post request is given below. The application tries to add 
             certain data to the URL /cars by only having to type in a new brand from a user. The id will be 
-            auto incremented (generated) when adding a new car, so a user doesn't need to write the id:
+            auto incremented (generated) when adding a new car, so a user doesn't need to write the id.
             At first the <code>newCar</code>-object is instantiated by the input of the request body 
             - <code>req.body</code>. When defining the id variable in the car object it takes the current/maximum
-            car id in the cars list and increments the number by 1 to define the new id. When the id has been 
-            added to the object, then the car object is added to the list with the <code>push()</code>-method. 
+            car id in the cars array and increments the number by 1 to define the new id. When the id has been 
+            added to the object, then the car object is added to the array with the <code>push()</code>-method. 
             At the end the result returns a response body:
             <code>
             app.post("/cars", (req, res) => {
@@ -101,8 +103,11 @@
             </code>
 
             In the next example we will look at the PUT-method in order to update details about an already existing car object. 
-            At first an index is initialized by using the <code>findexIndex()</code>-method where number of the id from the 
-            request parameter in the method body is used as index number. Then we know what id is 
+            At first an index is initialized by using the <code>findIndex()</code>-method where the number of the id from the 
+            request parameter in the method body is used as an index number. After finding the index, that index can be used 
+            to find the car that has to be overwritted with the <code>updatedCar</code>-variable which contains the newly added
+            information. At the end a response on the array of cars is returned to see the results of all the cars, represented
+            as jSON-objects:
             <code>
             app.put("cars/:id", (req, res) => {
                 const foundIndex = cars.findIndex(car => car.id === Number(req.params.id));
@@ -115,16 +120,18 @@
             });
             </code>                    
             
+            In the last example we will look at how a car object can be deleted from an array. Like in the put method
+            we have to specify the URL for the id. In order to remove a car object in the array we use the 
+            <code>filter()</code>-method. As an argument to the filter method we have to parse the request parameter 
+            id in a car object to a number by using the <code>Number()</code>-parsing method on the request parameter id:
+            
             <code>
             app.delete("/cars/:id", (req, res) => {
-                //looping through each car in the list and getting the id from the body
+                //Looping through each car in the array and gets the id from the body.
                 cars = cars.filter(car => car.id !== Number(req.params.id)) 
                 //Number passes a string to an int
                 return res.send({ response: cars });
             });
-
-
-
             </code>
         </pre>
     </dt>

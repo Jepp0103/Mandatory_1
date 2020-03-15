@@ -1,4 +1,4 @@
-
+/*General texts and buttons*/
 p, li, ol, pre, h1, h4, h5, section {
     margin: 0;
     padding: 0;
@@ -38,7 +38,7 @@ code, pre {
 }
 
 
-/* Hardcoded layout for the pictures on the jQuery page */
+/* Hardcoded layout for the pictures on the jQuery page and npm section */
 #selectorsPicture {
     height: 563px;
     width: 638px;
@@ -65,8 +65,7 @@ code, pre {
 }
 
 
-/*jQuery lion and widget panel*/
-
+/*jQuery lion*/
 #lionInfo {
     size: 1000px;
 }
@@ -88,6 +87,7 @@ code, pre {
       to{left:0px;}
     }
 
+/*Widget side panel*/
 .widget-content {
     font-size: xx-large;
     font-weight: bold;
